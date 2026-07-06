@@ -5,6 +5,8 @@ generic AI-looking interfaces by establishing project cognition, user journeys,
 business-object boundaries, recovery states, mobile priorities, and frontend
 governance before implementation.
 
+This is an unofficial community-maintained skill for Codex.
+
 This repository is the clean working project for the skill. The actual skill
 bundle lives in [`ui-ux/`](ui-ux/).
 
