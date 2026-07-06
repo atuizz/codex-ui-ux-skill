@@ -7,6 +7,7 @@ and uses semantic versioning once tagged releases begin.
 
 ### Added
 
+- Chinese README and a more complete project landing page.
 - Root open-source project documentation and governance files.
 - GitHub Actions validation workflow.
 - Version file and release packaging script.

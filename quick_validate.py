@@ -43,6 +43,7 @@ REQUIRED_TEMPLATES = {
 
 REQUIRED_PROJECT_FILES = {
     "README.md",
+    "README.zh-CN.md",
     "LICENSE",
     "CONTRIBUTING.md",
     "SECURITY.md",
@@ -164,6 +165,17 @@ def validate_open_source_hygiene(report: Report) -> None:
         "## License",
     ]:
         report.ok(marker in readme, f"README.md missing section: {marker}")
+
+    readme_zh = read_text(ROOT / "README.zh-CN.md", report)
+    for marker in [
+        "**语言：**",
+        "## 为什么需要它",
+        "## 适用场景",
+        "## 本地安装",
+        "## 每次修改前都要校验",
+        "## 项目状态",
+    ]:
+        report.ok(marker in readme_zh, f"README.zh-CN.md missing section: {marker}")
 
     contributing = read_text(ROOT / "CONTRIBUTING.md", report)
     for marker in ["python -S quick_validate.py", "ui-ux/evals/evals.json", "ui-ux/evals/trigger-evals.json"]:
