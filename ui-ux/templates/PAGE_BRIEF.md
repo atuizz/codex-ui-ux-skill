@@ -93,11 +93,19 @@ User-facing words to use:
 
 - [word]
 
+Primary language for labels, states, and actions:
+
+- [language / locale]
+
 Internal terms to translate:
 
 | Internal term | User-facing label |
 |---|---|
 | [term] | [translation] |
+
+Agent-only context not to show as primary UI copy:
+
+- [implementation detail / design intent / protocol explanation]
 
 ---
 

@@ -92,11 +92,21 @@ Choose one or combine deliberately:
 - [word]
 - [word]
 
+### Primary UI language
+
+- [language / locale for labels, states, actions, and empty/error/success copy]
+
 ### Internal terms to keep secondary (translate or hide)
 
 | Internal term | Human translation | Where to surface |
 |---|---|---|
 | [term] | [translation] | detail / tooltip / diagnostic / never |
+
+### Agent-only context to keep out of primary UI
+
+| Agent / implementation context | Where it belongs instead |
+|---|---|
+| [Design intent / protocol explanation / implementation contract] | docs / tooltip / diagnostic / code comment |
 
 ---
 

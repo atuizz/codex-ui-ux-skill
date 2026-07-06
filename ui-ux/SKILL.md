@@ -149,6 +149,29 @@ When existing UI shows clear GPT/Codex flavor, diagnose before patching:
 
 Translate all project and UI copy into words users understand. Do not paste README, architecture, protocol, or internal terms onto operational pages.
 
+Separate what the agent needs to know from what the user needs to act on:
+
+```text
+Agent context / implementation understanding → keep in code, docs, comments, tooltips, diagnostics, or project governance.
+User task / current state / next action      → show in the primary UI.
+```
+
+Do not let the interface narrate itself. Avoid UI copy that explains design intent, implementation contracts, or component semantics, such as:
+
+```text
+"This panel is only for diagnostics."
+"JSON is not the main operation entry."
+"This page validates the search → resources → resolve protocol."
+```
+
+Turn those into user-facing state and action copy instead:
+
+```text
+"搜索已完成，未找到匹配资源。"
+"换一个关键词，或切换书源后再试。"
+"原始响应"
+```
+
 Use this hierarchy:
 
 1. **Human-facing conclusion** — what happened and what to do.
@@ -162,6 +185,8 @@ First action, then raw data.
 ```
 
 Developer-focused pages may surface more technical terms, but hierarchy still applies.
+
+If the product's primary user language is known, use that language for primary UI labels, states, and actions. API names, protocol steps, JSON fields, and internal object names may appear as secondary labels, badges, tooltips, or raw diagnostic content — not as the dominant interface language.
 
 ## Product temperament before style
 

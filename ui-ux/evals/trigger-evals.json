@@ -78,5 +78,9 @@
   {
     "query": "我有一个 PDF 合同，帮我合并封面和附件并加页码，和网页 UI 没有关系。",
     "should_trigger": false
+  },
+  {
+    "query": "这个工具页把“JSON 只是诊断区”“按 search/resources/resolve 验证协议”这种实现说明都写到页面上了，帮我评审 GPT 自说自话和中英割裂的问题。",
+    "should_trigger": true
   }
 ]

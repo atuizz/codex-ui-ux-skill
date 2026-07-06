@@ -210,7 +210,7 @@ It intentionally includes only the installable `ui-ux/` skill bundle.
 
 ## Project status
 
-Current release: [`v0.1.0`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.0)
+Current release: [`v0.1.1`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.1)
 
 Maturity:
 
@@ -249,3 +249,4 @@ See [`SECURITY.md`](SECURITY.md).
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
+

@@ -15,6 +15,37 @@ Use this as a diagnostic list, not a rigid ban list. Some patterns can be valid 
 
 ---
 
+## 1A. Self-narrating UI
+
+**Symptoms:** The interface explains its own design intent or implementation semantics instead of helping the user act. Examples include subtitles like "JSON is only for diagnostics, not the main operation entry", labels that explain why a panel exists, or status text that describes the system's internal model rather than the user's current result.
+
+This usually happens when the agent confuses:
+
+```text
+What the agent needs to know to implement the page
+```
+
+with:
+
+```text
+What the user needs to see to complete the task
+```
+
+**Fix:**
+- Keep implementation reasoning in code, docs, comments, tooltips, diagnostics, or governance files.
+- Primary UI copy should state what happened, why it matters, and what the user can do next.
+- Replace self-explanatory copy with state/action copy.
+- Use the user's primary language for labels, states, and actions. Put protocol/API names in secondary labels or raw diagnostics.
+
+Example:
+
+```text
+Bad:  JSON 区只做诊断，不作为主操作入口。
+Good: 搜索已完成，未找到匹配资源。换一个关键词，或切换书源后再试。
+```
+
+---
+
 ## 2. Tool page as landing page
 
 **Symptoms:** API console or admin tool gets a giant hero, decorative background, atmospheric copy, serif display title, or marketing language. The actual task flow is secondary to style.
@@ -100,6 +131,7 @@ Use this as a diagnostic list, not a rigid ban list. Some patterns can be valid 
 - Translate every user-visible state.
 - Show raw codes in diagnostic / detail sections.
 - Include impact and next step in the primary message.
+- If the primary UI is in Chinese, do not let English protocol words dominate labels and actions. Use forms such as `搜索（search）`, `资源列表（resources）`, or keep protocol words in diagnostic details.
 
 ---
 

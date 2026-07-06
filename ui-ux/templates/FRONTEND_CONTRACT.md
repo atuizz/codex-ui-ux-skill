@@ -14,6 +14,7 @@ These apply on all surfaces with no exceptions:
 - Dangerous or destructive actions require confirmation or an undo mechanism.
 - Every core async surface must have loading, empty, and error states.
 - Technical states must be translated into human language in primary UI.
+- Agent-only context, implementation reasoning, and design intent must not appear as primary UI copy.
 - Long text, IDs, paths, and JSON must not break layout.
 - Mobile view must preserve the primary task.
 - Do not paste README, architecture, or product manifesto into operational UI.
@@ -62,6 +63,8 @@ These apply on all surfaces with no exceptions:
 2. First conclusion, then detail.
 3. First action, then raw data.
 4. Page headers state the task — not the product manifesto.
+5. Primary UI copy says what happened and what to do next — not why the agent designed the panel.
+6. The product's primary language owns labels, states, and actions; protocol/API words are secondary unless the page is explicitly an API reference.
 
 ---
 

@@ -23,6 +23,15 @@ Before significant frontend work, answer:
 
 Default UI copy uses user language. Technical terms belong in diagnostic areas, raw inspectors, developer mode, tooltips, or expandable details — unless the page is explicitly for developers.
 
+Before writing page copy, split context into two buckets:
+
+| Bucket | Belongs where | Example |
+|---|---|---|
+| Agent / implementation context | Code, docs, comments, tooltips, diagnostics, governance docs | "JSON is diagnostic only", "resource resolution uses search → resources → resolve" |
+| User action context | Primary UI labels, states, empty/error/success copy | "搜索已完成，未找到匹配资源", "选择一个结果查看可下载资源" |
+
+Do not paste the first bucket into the second. This is the most common source of GPT/Codex self-narrating UI.
+
 Hierarchy:
 
 ```
@@ -33,6 +42,12 @@ Avoid:
 
 ```
 internal_term=true → code → raw object → user must infer what happened
+```
+
+Also avoid:
+
+```text
+Design intent / implementation explanation → primary UI copy
 ```
 
 ## Status translation pattern
@@ -75,6 +90,9 @@ User-facing words (use these in UI):
 Internal terms to keep secondary (translate or hide):
   - [term] → [human translation]
   - [term] → [human translation]
+
+Agent-only context that should not appear as primary UI copy:
+  - [implementation note / design intent] → [where it belongs: docs / tooltip / diagnostic / code comment]
 
 States that need explanation and next-step copy:
   - [state]: [what it means] + [what user should do]

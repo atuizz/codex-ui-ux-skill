@@ -26,6 +26,7 @@ GPT/Codex often produces acceptable-looking screens while missing the product ex
 
 - It optimizes the screenshot, not the user's task.
 - It confuses product explanation with interface design.
+- It narrates its own implementation reasoning on the page instead of separating agent context from user action copy.
 - It creates equal-weight cards instead of decisions and priorities.
 - It exposes internal objects, README language, routes, statuses, and architecture terms.
 - It treats shadcn / Ant / MUI defaults as the finished product.
@@ -102,6 +103,16 @@ What happened?
 Why does it matter?
 What can I do next?
 ```
+
+Primary UI copy should not answer:
+
+```text
+Why did the agent design this panel?
+What implementation contract does this component follow?
+Which protocol concept is the agent trying to prove it understands?
+```
+
+Those belong in docs, tooltips, diagnostics, or raw details.
 
 For every important state, include:
 

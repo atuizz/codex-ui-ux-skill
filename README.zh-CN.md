@@ -201,7 +201,7 @@ dist/ui-ux-<version>.skill
 
 ## 项目状态
 
-当前版本：[`v0.1.0`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.0)
+当前版本：[`v0.1.1`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.1)
 
 成熟度：
 
@@ -239,3 +239,4 @@ dist/ui-ux-<version>.skill
 ## License
 
 MIT。见 [`LICENSE`](LICENSE)。
+

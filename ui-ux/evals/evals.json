@@ -99,6 +99,21 @@
         "Includes mobile primary action/reordering and accessibility/focus considerations.",
         "Recommends codifying repeated billing/cancellation rules into FRONTEND_CONTRACT.md if applicable."
       ]
+    },
+    {
+      "id": 8,
+      "name": "self-narrating-tool-console-copy",
+      "prompt": "这个本地开发者测试台页面把很多解释直接写到界面上：副标题说它按 search→resources→resolve 验证协议，右侧面板写“JSON 区只做诊断，不作为主操作入口”，状态区有 GATEWAY/RESOURCE/DEV KEY 英文卡片，空状态又写“当前没有可选择的条目”。请评审这类 GPT 自说自话问题，并给出中文为主的改法。",
+      "expected_output": "The response should identify self-narrating UI / README-on-screen as the root problem, separate agent implementation context from user-facing action copy, enforce a primary-language strategy, and rewrite examples into concise Chinese state/action copy while keeping protocol/API names secondary.",
+      "files": [],
+      "expectations": [
+        "Names self-narrating UI or README-on-screen as the root issue rather than treating it as only spacing or style.",
+        "Separates agent/implementation context from what the user needs to see and act on in the UI.",
+        "States that primary UI labels, states, and actions should use the product's primary language, with API/protocol words secondary.",
+        "Rewrites example copy into concise Chinese state/action copy such as search completed, no matched resources, try another keyword/source.",
+        "Recommends moving design intent, implementation contracts, and protocol explanations to docs, tooltips, diagnostics, or raw details.",
+        "Flags GATEWAY/RESOURCE/DEV KEY as read-only/environment/diagnostic context and recommends lower visual weight plus key masking where appropriate."
+      ]
     }
   ]
 }

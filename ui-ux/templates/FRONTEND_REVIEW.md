@@ -50,9 +50,11 @@ Recommended action:    keep / polish / local refactor / component refactor / pag
 ## Human-language copy
 
 - [ ] UI does not paste README or architecture copy
+- [ ] UI does not narrate agent reasoning, implementation contracts, or panel purpose as primary copy
 - [ ] Technical states are translated to user language
 - [ ] Error copy includes reason, impact, and next step
 - [ ] Raw IDs / JSON are secondary or hidden unless developer-focused
+- [ ] Primary UI language is consistent; protocol/API terms are secondary unless required
 
 ---
 
