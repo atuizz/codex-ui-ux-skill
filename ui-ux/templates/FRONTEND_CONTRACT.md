@@ -59,6 +59,8 @@ These apply on all surfaces with no exceptions:
 
 ## Copy rules
 
+These are product-context rules, not string blacklists. Technical copy is allowed when it directly helps the user complete this page's task; otherwise demote it to help, tooltip, diagnostics, raw details, docs, or code comments.
+
 1. First human words, then terminology.
 2. First conclusion, then detail.
 3. First action, then raw data.

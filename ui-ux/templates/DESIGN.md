@@ -104,6 +104,8 @@ Choose one or combine deliberately:
 
 ### Agent-only context to keep out of primary UI
 
+This section records patterns to place correctly; it is not a blacklist of exact phrases. A technical phrase may be valid in developer help, diagnostics, or raw details when it helps the user debug.
+
 | Agent / implementation context | Where it belongs instead |
 |---|---|
 | [Design intent / protocol explanation / implementation contract] | docs / tooltip / diagnostic / code comment |

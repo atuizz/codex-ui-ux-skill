@@ -27,10 +27,16 @@ Before writing page copy, split context into two buckets:
 
 | Bucket | Belongs where | Example |
 |---|---|---|
-| Agent / implementation context | Code, docs, comments, tooltips, diagnostics, governance docs | "JSON is diagnostic only", "resource resolution uses search → resources → resolve" |
+| Agent / implementation context | Code, docs, comments, tooltips, diagnostics, governance docs | "Raw response panel supports debugging", "resource lookup calls search then resolve" |
 | User action context | Primary UI labels, states, empty/error/success copy | "搜索已完成，未找到匹配资源", "选择一个结果查看可下载资源" |
 
 Do not paste the first bucket into the second. This is the most common source of GPT/Codex self-narrating UI.
+
+This is not a fixed phrase blacklist. Judge the role of the copy in its current context:
+
+- **Keep or surface it** when it helps the user decide, act, debug, or recover on this page.
+- **Demote or rewrite it** when it mainly explains why the agent designed a panel, how a component is wired, or which protocol concept the agent is proving it understands.
+- **Allow technical language** on developer/API/diagnostic surfaces when the technical detail is the user's task, but keep hierarchy clear: current result and next action first, raw detail second.
 
 Hierarchy:
 

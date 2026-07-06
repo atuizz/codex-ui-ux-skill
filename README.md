@@ -210,7 +210,7 @@ It intentionally includes only the installable `ui-ux/` skill bundle.
 
 ## Project status
 
-Current release: [`v0.1.1`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.1)
+Current release: [`v0.1.2`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.2)
 
 Maturity:
 

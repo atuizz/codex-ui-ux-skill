@@ -231,6 +231,9 @@ def validate_skill_md(report: Report) -> None:
     for heading in required_sections:
         report.ok(f"## {heading}" in text, f"SKILL.md missing section: {heading}")
 
+    for marker in ["not a string blacklist", "not forbidden literal strings"]:
+        report.ok(marker.lower() in text.lower(), f"SKILL.md missing context-based copy marker: {marker}")
+
     for match in re.finditer(r"`((?:references|templates|scripts)/[^`]+)`", text):
         rel = match.group(1)
         report.ok((SKILL / rel).exists(), f"SKILL.md references missing path: {rel}")
@@ -254,6 +257,7 @@ def validate_markdown_resources(report: Report) -> None:
             "### Default recovery paths",
             "### Mobile task priority",
             "Agent-only context to keep out of primary UI",
+            "not a blacklist of exact phrases",
         ],
         "templates/FRONTEND_REVIEW.md": [
             "## UX flow",
@@ -262,15 +266,18 @@ def validate_markdown_resources(report: Report) -> None:
             "Mobile layout reorders around the primary task",
             "does not narrate agent reasoning",
             "Primary UI language is consistent",
+            "not a string blacklist",
         ],
         "templates/FRONTEND_CONTRACT.md": [
             "Agent-only context",
             "Primary UI copy says what happened and what to do next",
             "protocol/API words are secondary",
+            "not string blacklists",
         ],
         "templates/PAGE_BRIEF.md": [
             "Primary language for labels",
             "Agent-only context not to show as primary UI copy",
+            "not a banned-phrase list",
         ],
     }
     for rel, markers in required_template_markers.items():

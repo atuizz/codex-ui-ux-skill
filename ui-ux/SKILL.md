@@ -156,7 +156,13 @@ Agent context / implementation understanding → keep in code, docs, comments, t
 User task / current state / next action      → show in the primary UI.
 ```
 
-Do not let the interface narrate itself. Avoid UI copy that explains design intent, implementation contracts, or component semantics, such as:
+Do not let the interface narrate itself. This is a placement and intent test, not a string blacklist:
+
+- A phrase is acceptable when it directly helps the current user decide, act, or recover on this surface.
+- The same phrase is a problem when it is prominent primary UI copy that explains the agent's design intent, implementation contract, or component semantics.
+- Developer tools and API consoles may expose protocol names, JSON, and diagnostic language when those are part of the user's task; keep them secondary to the current result and next action unless the page is explicitly a raw diagnostic view.
+
+Examples below illustrate a failure pattern. They are not forbidden literal strings:
 
 ```text
 "This panel is only for diagnostics."

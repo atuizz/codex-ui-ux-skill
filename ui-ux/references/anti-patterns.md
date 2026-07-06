@@ -17,7 +17,7 @@ Use this as a diagnostic list, not a rigid ban list. Some patterns can be valid 
 
 ## 1A. Self-narrating UI
 
-**Symptoms:** The interface explains its own design intent or implementation semantics instead of helping the user act. Examples include subtitles like "JSON is only for diagnostics, not the main operation entry", labels that explain why a panel exists, or status text that describes the system's internal model rather than the user's current result.
+**Symptoms:** The interface explains its own design intent or implementation semantics instead of helping the user act. Examples include prominent subtitles about why a panel exists, labels that explain component contracts, or status text that describes the system's internal model rather than the user's current result.
 
 This usually happens when the agent confuses:
 
@@ -31,17 +31,29 @@ with:
 What the user needs to see to complete the task
 ```
 
+This is not a ban on particular words. It is a context, hierarchy, and usefulness test:
+
+- If copy helps this user decide, act, debug, or recover now, it can stay.
+- If copy mainly proves the agent understands the protocol, component role, or implementation plan, it should move out of primary UI.
+- Developer and diagnostic surfaces may show technical terms, raw JSON, protocol steps, and panel roles when that is the user's actual job; still avoid making implementation rationale the headline for a task flow.
+
 **Fix:**
 - Keep implementation reasoning in code, docs, comments, tooltips, diagnostics, or governance files.
 - Primary UI copy should state what happened, why it matters, and what the user can do next.
 - Replace self-explanatory copy with state/action copy.
 - Use the user's primary language for labels, states, and actions. Put protocol/API names in secondary labels or raw diagnostics.
 
-Example:
+Pattern example, not a literal lint rule:
 
 ```text
-Bad:  JSON 区只做诊断，不作为主操作入口。
-Good: 搜索已完成，未找到匹配资源。换一个关键词，或切换书源后再试。
+Problematic as primary task copy:
+  JSON 区只做诊断，不作为主操作入口。
+
+Better when the user is trying to find a resource:
+  搜索已完成，未找到匹配资源。换一个关键词，或切换书源后再试。
+
+Acceptable when it is inside an advanced diagnostic help note:
+  原始响应仅用于排查接口问题。
 ```
 
 ---

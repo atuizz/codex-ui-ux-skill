@@ -114,6 +114,8 @@ Which protocol concept is the agent trying to prove it understands?
 
 Those belong in docs, tooltips, diagnostics, or raw details.
 
+Do not turn this into a literal banned-word rule. The same technical phrase can be correct in a developer diagnostic note and wrong as a task-page headline. Ask: does this copy help the user make the next decision, complete the current action, or recover from this state? If not, demote or rewrite it.
+
 For every important state, include:
 
 - loading: what is being prepared;

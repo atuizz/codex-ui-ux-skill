@@ -82,5 +82,9 @@
   {
     "query": "这个工具页把“JSON 只是诊断区”“按 search/resources/resolve 验证协议”这种实现说明都写到页面上了，帮我评审 GPT 自说自话和中英割裂的问题。",
     "should_trigger": true
+  },
+  {
+    "query": "我不是要你禁止某句文案，而是要评审页面把实现说明当主文案的模式；帮我把规则改成按语境判断。",
+    "should_trigger": true
   }
 ]

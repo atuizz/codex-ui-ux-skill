@@ -63,7 +63,7 @@ Active checks:
 - Reuse existing project components before creating new ones.
 - If creating a component, explain why existing components are insufficient.
 - Keep all page copy in user language.
-- Keep agent-only context out of primary UI. If the text explains why a panel exists, how the UI is architected, or what the agent is trying to prove, move it to docs, tooltip, diagnostic detail, or code comments.
+- Keep agent-only context out of primary UI. This is not a string blacklist: if the text helps the current user act, debug, or recover, it can remain in the right place. If it explains why a panel exists, how the UI is architected, or what the agent is trying to prove, move it to docs, tooltip, diagnostic detail, or code comments.
 - Translate every user-visible status and error.
 - Provide loading, empty, error, and long-text behavior for every async surface.
 - Protect destructive actions with confirmation or undo.

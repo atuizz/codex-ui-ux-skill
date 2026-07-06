@@ -51,6 +51,7 @@ Recommended action:    keep / polish / local refactor / component refactor / pag
 
 - [ ] UI does not paste README or architecture copy
 - [ ] UI does not narrate agent reasoning, implementation contracts, or panel purpose as primary copy
+- [ ] Review treats examples as context/hierarchy failures, not a string blacklist
 - [ ] Technical states are translated to user language
 - [ ] Error copy includes reason, impact, and next step
 - [ ] Raw IDs / JSON are secondary or hidden unless developer-focused

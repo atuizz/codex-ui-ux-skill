@@ -107,6 +107,10 @@ Agent-only context not to show as primary UI copy:
 
 - [implementation detail / design intent / protocol explanation]
 
+Context rule:
+
+- This is not a banned-phrase list. Keep technical language when it helps the page's user act, debug, or recover; otherwise move it to tooltip, diagnostic detail, docs, or code comments.
+
 ---
 
 ## Anti-pattern risks

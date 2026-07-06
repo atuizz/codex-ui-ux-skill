@@ -5,6 +5,17 @@ and uses semantic versioning once tagged releases begin.
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-07-06
+
+### Changed
+
+- Clarified that self-narrating UI guidance is pattern-based, not a blacklist of
+  specific phrases.
+- Added context exceptions for developer/API/diagnostic surfaces where technical
+  copy directly helps the user act, debug, or recover.
+- Updated templates, evals, and validation markers to prevent overfitting to one
+  example's wording.
+
 ## [0.1.1] - 2026-07-06
 
 ### Added
