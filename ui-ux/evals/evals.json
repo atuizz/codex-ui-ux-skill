@@ -115,6 +115,22 @@
         "Recommends moving design intent, implementation contracts, and protocol explanations to docs, tooltips, diagnostics, or raw details.",
         "Flags GATEWAY/RESOURCE/DEV KEY as read-only/environment/diagnostic context and recommends lower visual weight plus key masking where appropriate."
       ]
+    },
+    {
+      "id": 9,
+      "name": "baseline-craft-without-creativity-constraint",
+      "prompt": "我不是要限制 AI 的视觉创造力，但这个深色本地测试台页面有基础工艺问题：顶部环境状态像输入框，右侧解析按钮和成功下载卡片不对齐，复制 JSON 离原始响应很远，左侧列表底部有一块无意义空白，tag、数字精度和按钮颜色体系也不统一。请用 ui/ux 质量门评审，并说明哪些规则应该沉淀到前端规范。",
+      "expected_output": "The response should distinguish creative freedom from baseline frontend craft, avoid banning expressive styling, and identify alignment, spacing, action hierarchy, status/control distinction, action proximity, technical identifier hierarchy, tag semantics, numeric precision, selected states, and empty-space closure as reusable craft rules.",
+      "files": [],
+      "expectations": [
+        "States that the goal is not to constrain creative visual direction, colors, gradients, or expressive layouts by default.",
+        "Defines a baseline craft floor covering alignment, spacing rhythm, hierarchy, semantic grouping, and intentional whitespace.",
+        "Flags read-only status indicators that look like inputs and navigation/status indicators that share confusing visual treatments.",
+        "Requires primary, secondary, and utility action hierarchy plus action proximity to target content.",
+        "Requires human-facing labels to outrank technical identifiers such as endpoints, URLs, JSON keys, IDs, and filenames.",
+        "Mentions consistent numeric precision, tag semantics/overflow, selected-state signals, and separator conventions.",
+        "Recommends codifying these as generic frontend guardrails rather than page-specific or Hundun-specific rules."
+      ]
     }
   ]
 }

@@ -17,6 +17,7 @@ These are recurring lessons from real project feedback:
 - Mobile UX needs task reordering, not only responsive stacking.
 - Good UI work should leave reusable rules behind in project docs when the lesson will repeat.
 - `AGENTS.md` is for short handoff pointers; detailed frontend rules belong in frontend governance docs.
+- Creativity should not be constrained by rigid taste rules, but basic craft must hold: alignment, spacing, hierarchy, semantic grouping, state clarity, and action/content proximity.
 
 ---
 
@@ -35,6 +36,7 @@ GPT/Codex often produces acceptable-looking screens while missing the product ex
 - It handles mobile by stacking desktop UI, not by reordering the mobile task.
 - It forgets loading, empty, error, permission, destructive-action, long-text, and recovery states.
 - It over-polishes with gradients, glass, badges, and cards without improving comprehension.
+- It makes locally reasonable components that drift globally: inconsistent spacing, tag styles, separators, button hierarchy, status/control treatments, or unclaimed empty space.
 
 ## UX-first questions
 
@@ -92,6 +94,10 @@ Look for friction that a clean screenshot can hide:
 - Empty state is decorative but not actionable.
 - Permission denial has no request/access path.
 - Long text, IDs, or paths destroy scanning.
+- Actions are stranded far from the content they operate on.
+- Read-only status looks like an editable input, or navigation tabs look like display-only status indicators.
+- User-facing labels and technical identifiers have equal visual weight.
+- Empty leftover space makes the layout feel unfinished rather than intentionally calm.
 - Mobile requires scrolling past secondary content before the main action.
 
 ## Microcopy and recovery

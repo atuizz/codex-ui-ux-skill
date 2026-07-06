@@ -85,6 +85,21 @@ Choose one or combine deliberately:
 
 ---
 
+## 8A. Baseline craft norms
+
+Creative direction for this project should preserve:
+
+- Alignment / grid rhythm:
+- Spacing scale:
+- Primary / secondary / utility action treatment:
+- Status vs input/control treatment:
+- Technical identifier treatment:
+- Tag semantics and overflow:
+- Selected / active state signals:
+- Empty-space policy:
+
+---
+
 ## 9. Vocabulary
 
 ### User-facing words (use in UI)

@@ -192,6 +192,23 @@ Acceptable when it is inside an advanced diagnostic help note:
 
 ---
 
+## 14. Local consistency drift / weak craft floor
+
+**Symptoms:** The page has a coherent visual idea, and individual components look acceptable, but the whole surface feels patched together. Common signs: misaligned panels, uneven leftover whitespace, read-only status cards that look like inputs, actions far from the content they operate on, technical identifiers at the same weight as human labels, mixed separators, inconsistent tag styles, mixed numeric precision, or selected states relying only on color.
+
+This is not a creativity ban. Gradients, unusual layouts, dense consoles, expressive motion, and strong brand treatments can all be valid. The failure is when basic alignment, hierarchy, semantic grouping, and state clarity collapse under the style.
+
+**Fix:**
+- Establish a simple grid, spacing rhythm, and region hierarchy before polishing details.
+- Define primary / secondary / utility action hierarchy per region.
+- Keep status, controls, navigation, diagnostics, and raw data visually distinct.
+- Put actions near their target content.
+- Make human labels primary and technical identifiers secondary.
+- Use consistent numeric precision, tag semantics, separators, active-state signals, and overflow rules.
+- Remove or assign purpose to empty leftover space.
+
+---
+
 ## Diagnosis format
 
 When reviewing an existing UI for anti-patterns, use:

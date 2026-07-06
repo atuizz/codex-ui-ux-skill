@@ -55,6 +55,16 @@ What should be most visible, in order:
 
 [Why this page uses table / workbench / detail panel / wizard / cards / split pane / etc. Link to the user task.]
 
+## Baseline craft decision
+
+- **Grid / alignment:** [How major regions align and where the page should end]
+- **Spacing rhythm:** [Main gap and padding choices]
+- **Action hierarchy:** [Primary / secondary / utility actions for this page]
+- **Action proximity:** [Where actions live relative to target content]
+- **Status vs controls:** [How read-only state differs from inputs / tabs / buttons]
+- **Technical identifiers:** [Where endpoints, IDs, URLs, JSON, or filenames appear and how they are visually secondary]
+- **Empty-space policy:** [What empty space means, or what should collapse]
+
 ## UX risks and recovery
 
 | Risk / state | User impact | Recovery / next step |

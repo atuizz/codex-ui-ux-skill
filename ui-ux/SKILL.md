@@ -11,6 +11,8 @@ This skill turns Codex from a free-form UI generator into a frontend design-and-
 
 Frontend quality is not a fixed style guide or a pile of rules. Good frontend work requires project cognition, task-flow judgment, product temperament, page-type judgment, human-language copy, component reuse, visual verification, and iterative polishing.
 
+Do not constrain the agent's creative range by banning colors, gradients, density, unusual layouts, or expressive visual direction by default. Creative freedom is welcome when it fits the product. But every frontend surface has a baseline craft floor: alignment, spacing rhythm, hierarchy, semantic grouping, state clarity, and target/action proximity must be coherent before visual experimentation counts as polish.
+
 The goal is not "avoid shadcn" or "ban gradients." The real goal is:
 
 ```
@@ -18,6 +20,12 @@ raw GPT output → stable component baseline → project-specific product UI →
 ```
 
 Do not optimize only the visible screen. Optimize the user's journey: entry → decision → action → feedback → recovery → completion.
+
+Think of this as:
+
+```text
+freedom in style, discipline in structure
+```
 
 ## Non-negotiable first step: project cognition
 
@@ -90,6 +98,7 @@ Recommended UI foundation:
 Reference design systems:
 What must not appear on screen:
 Key anti-pattern risks:
+Baseline craft risks:
 Verification plan:
 ```
 
@@ -245,6 +254,15 @@ Quick stance:
 
 If the product is novel, AI-native, marketing-led, or consumer-facing, allow stronger visual identity. Explain why the style fits the product and how it preserves usability.
 
+Creative freedom does not waive the craft floor. Before delivery, check that:
+
+- alignment and spacing follow a clear rhythm;
+- primary, secondary, and utility actions are visually distinct;
+- read-only status, navigation, controls, and diagnostics do not share confusing styles;
+- user-facing labels dominate technical identifiers;
+- actions sit near the content they operate on;
+- empty leftover space is intentional, not unfinished layout residue.
+
 ## Anti-pattern self-check
 
 Before delivery, verify the output does not contain:
@@ -263,6 +281,7 @@ Before delivery, verify the output does not contain:
 - Mechanical mobile stacking without task reordering.
 - Default component-library look with no project-specific adaptation.
 - Missing loading / empty / error / long-text states.
+- Local consistency drift: components look reasonable alone but misalign across spacing, tag styles, numeric precision, state indicators, separators, or button hierarchy.
 
 If present, fix or explicitly justify. See `references/anti-patterns.md`.
 

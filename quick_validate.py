@@ -231,7 +231,12 @@ def validate_skill_md(report: Report) -> None:
     for heading in required_sections:
         report.ok(f"## {heading}" in text, f"SKILL.md missing section: {heading}")
 
-    for marker in ["not a string blacklist", "not forbidden literal strings"]:
+    for marker in [
+        "not a string blacklist",
+        "not forbidden literal strings",
+        "baseline craft floor",
+        "freedom in style, discipline in structure",
+    ]:
         report.ok(marker.lower() in text.lower(), f"SKILL.md missing context-based copy marker: {marker}")
 
     for match in re.finditer(r"`((?:references|templates|scripts)/[^`]+)`", text):
@@ -258,6 +263,7 @@ def validate_markdown_resources(report: Report) -> None:
             "### Mobile task priority",
             "Agent-only context to keep out of primary UI",
             "not a blacklist of exact phrases",
+            "## 8A. Baseline craft norms",
         ],
         "templates/FRONTEND_REVIEW.md": [
             "## UX flow",
@@ -267,17 +273,23 @@ def validate_markdown_resources(report: Report) -> None:
             "does not narrate agent reasoning",
             "Primary UI language is consistent",
             "not a string blacklist",
+            "## Baseline craft",
+            "Empty space is intentional",
         ],
         "templates/FRONTEND_CONTRACT.md": [
             "Agent-only context",
             "Primary UI copy says what happened and what to do next",
             "protocol/API words are secondary",
             "not string blacklists",
+            "## Baseline craft floor",
+            "Actions must sit near the content they operate on",
         ],
         "templates/PAGE_BRIEF.md": [
             "Primary language for labels",
             "Agent-only context not to show as primary UI copy",
             "not a banned-phrase list",
+            "## Baseline craft decision",
+            "Empty-space policy",
         ],
     }
     for rel, markers in required_template_markers.items():

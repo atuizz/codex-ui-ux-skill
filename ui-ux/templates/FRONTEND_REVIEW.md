@@ -64,8 +64,22 @@ Recommended action:    keep / polish / local refactor / component refactor / pag
 - [ ] Product temperament is appropriate for this surface
 - [ ] Style supports the task rather than decorating it
 - [ ] Visual hierarchy is clear
+- [ ] Creative choices preserve baseline craft instead of hiding weak alignment or hierarchy
 - [ ] UI is not merely a default component-library template
 - [ ] Page has product identity without fake-premium decoration
+
+---
+
+## Baseline craft
+
+- [ ] Alignment, spacing, and panel rhythm are coherent across the whole page
+- [ ] Empty space is intentional; no leftover unfinished regions
+- [ ] Primary, secondary, and utility actions are visually distinct
+- [ ] Actions are close to the content they operate on
+- [ ] Read-only status does not look like editable input
+- [ ] Navigation controls and display-only status indicators are visually distinct
+- [ ] Human labels are primary and technical identifiers are secondary
+- [ ] Numeric precision, tag semantics, separators, selected states, and overflow rules are consistent
 
 ---
 

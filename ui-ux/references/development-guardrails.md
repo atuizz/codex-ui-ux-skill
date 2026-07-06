@@ -50,6 +50,26 @@ Allowed where product temperament supports it. The agent must:
 1. Explain why the style fits the product.
 2. Confirm that usability is preserved.
 
+Creative freedom is not a waiver for baseline craft. Do not ban expressive visuals by default; instead preserve the craft floor that lets creativity feel intentional rather than accidental.
+
+## Baseline craft floor
+
+Apply these checks to every user-visible surface, regardless of style:
+
+- **Alignment and rhythm:** sections, cards, controls, and panels align to an obvious grid or rhythm. Avoid stray half-width islands and leftover empty regions that make the page look unfinished.
+- **Spacing consistency:** similar component groups use similar padding, gaps, radii, and density unless a product reason explains the difference.
+- **Action hierarchy:** define primary, secondary, and utility actions before coloring buttons. Use one primary action per region when possible; keep utility actions such as copy/export visually quieter.
+- **Action proximity:** place an action near the content it operates on. A copy button belongs with the copied content; a delete button belongs with the item or panel it affects.
+- **Status vs controls:** read-only status indicators must not look like editable inputs. Navigation tabs and display-only step/status indicators must use distinct treatments.
+- **Human label vs technical identifier:** user-facing labels are primary; endpoints, paths, IDs, status codes, JSON keys, hashes, filenames, and version strings are secondary, smaller, lower contrast, or monospace where helpful.
+- **Technical string rendering:** render API endpoints, URLs, file paths, IDs, hashes, and version strings in a style that makes them recognizable as data, not prose; avoid giving them equal weight with task labels.
+- **Numeric precision:** numeric values in the same column or list use consistent precision and alignment. Prefer user-facing labels like "匹配度 90%" when raw confidence is not needed.
+- **Tag semantics:** tags with different meanings (source, author, type, status, environment) should not all look identical. Use grouping, prefix, tone, or shape to distinguish semantic categories.
+- **Tag overflow:** list-row tags need max-width, truncation, wrapping rules, or tooltip. Long tags should not break row rhythm.
+- **Selected state:** active/selected states use at least two visual signals, such as color + border, background + weight, icon + label, or position + emphasis. Do not rely on color alone.
+- **Separator convention:** choose one separator convention per component type and apply it consistently. Avoid mixing `·`, `/`, badges, and loose spaces at the same interface layer.
+- **Conditional copy:** instructional copy that references a state ("select an item", "after step X") appears only when that state is true. Loading, empty, error, and success states need their own copy.
+
 ---
 
 ## Before coding
@@ -69,6 +89,7 @@ Active checks:
 - Protect destructive actions with confirmation or undo.
 - Do not let tables become configuration or editing surfaces.
 - Consider mobile task reordering — not just vertical stacking.
+- Preserve baseline craft: alignment, spacing, action hierarchy, status/control distinction, action proximity, technical identifier hierarchy, and intentional whitespace.
 - Prefer deterministic visual verification for important pages.
 
 ## After coding

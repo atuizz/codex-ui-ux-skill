@@ -75,6 +75,25 @@ Examples:
 - `dispatch` → **已放行**
 - `ignore` → **已拦截**
 
+## Human labels and technical identifiers
+
+When a UI element includes both a human-facing label and a technical identifier, do not render them at equal weight.
+
+Examples of technical identifiers:
+
+- API endpoints and HTTP methods;
+- URLs, file paths, filenames, IDs, hashes, and version strings;
+- raw status codes, JSON keys, object names, and protocol step names.
+
+Default hierarchy:
+
+```text
+Human label           → primary text: full size, normal/high contrast
+Technical identifier  → secondary text: smaller, lower contrast, badge, tooltip, details, or monospace data style
+```
+
+Use monospace or data styling to clarify generated values, but do not let data styling make technical detail dominate the user's task.
+
 ## Project vocabulary template
 
 Fill this in for every project before implementation:

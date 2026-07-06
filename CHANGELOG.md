@@ -5,6 +5,25 @@ and uses semantic versioning once tagged releases begin.
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-07-06
+
+### Added
+
+- Baseline craft floor guidance: alignment, spacing rhythm, action hierarchy,
+  status/control distinction, action proximity, technical identifier hierarchy,
+  intentional whitespace, tag semantics, selected-state signals, and numeric
+  precision.
+- Anti-pattern coverage for local consistency drift / weak craft floor.
+- Eval coverage for preserving creative freedom while enforcing basic frontend
+  craft and alignment rules.
+
+### Changed
+
+- Clarified that expressive visual direction is allowed when it preserves
+  usability and baseline craft.
+- Expanded frontend governance templates and validator markers for baseline
+  craft checks.
+
 ## [0.1.3] - 2026-07-06
 
 ### Changed

@@ -57,6 +57,21 @@ These apply on all surfaces with no exceptions:
 
 ---
 
+## Baseline craft floor
+
+These rules protect clarity without restricting creative direction:
+
+- Alignment, spacing, and panel rhythm must look intentional.
+- Empty space must either support hierarchy or be removed; no unfinished leftover regions.
+- Primary, secondary, and utility actions must be visually distinct.
+- Actions must sit near the content they operate on.
+- Read-only status indicators must not look like editable inputs.
+- Navigation tabs and display-only status indicators must not share the same visual treatment.
+- User-facing labels are primary; endpoints, paths, IDs, status codes, JSON keys, filenames, hashes, and version strings are secondary.
+- Numeric precision, tag styling, separators, selected states, and overflow behavior must be consistent inside the same component family.
+
+---
+
 ## Copy rules
 
 These are product-context rules, not string blacklists. Technical copy is allowed when it directly helps the user complete this page's task; otherwise demote it to help, tooltip, diagnostics, raw details, docs, or code comments.
