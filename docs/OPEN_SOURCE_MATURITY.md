@@ -30,4 +30,4 @@ This project targets a mature small open-source project standard.
 
 - [ ] Full with-skill vs baseline benchmark report using `docs/BENCHMARK_TEMPLATE.md`.
 - [ ] Trigger optimization report against held-out queries.
-- [ ] Tagged release with packaged `.skill` artifact.
+- [x] Tagged release with packaged `.skill` artifact.

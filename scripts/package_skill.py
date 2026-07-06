@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import re
 import zipfile
 
 
@@ -19,12 +20,22 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SKILL = ROOT / "ui-ux"
 DEFAULT_VERSION_FILE = ROOT / "VERSION"
 FIXED_ZIP_TIMESTAMP = (2026, 1, 1, 0, 0, 0)
+VERSION_PATTERN = re.compile(r"\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?")
 
 
 def read_version(version_file: Path) -> str:
+    if not version_file.is_file():
+        raise FileNotFoundError(
+            f"Version file not found: {version_file}. "
+            "Create VERSION or pass --version explicitly."
+        )
     version = version_file.read_text(encoding="utf-8").strip()
     if not version:
         raise ValueError(f"Version file is empty: {version_file}")
+    if not VERSION_PATTERN.fullmatch(version):
+        raise ValueError(
+            f"Version file must contain a semantic version such as 0.1.0: {version_file}"
+        )
     return version
 
 

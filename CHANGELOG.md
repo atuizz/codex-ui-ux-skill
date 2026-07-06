@@ -5,6 +5,17 @@ and uses semantic versioning once tagged releases begin.
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-07-06
+
+### Changed
+
+- Added a clearer project-cognition prompt for what the agent must understand
+  but not surface in primary UI.
+- Named the self-narrating UI pattern as interface self-narration for easier
+  review lookup.
+- Improved release packaging errors when `VERSION` is missing or invalid.
+- Updated the maturity checklist now that tagged packaged releases exist.
+
 ## [0.1.2] - 2026-07-06
 
 ### Changed

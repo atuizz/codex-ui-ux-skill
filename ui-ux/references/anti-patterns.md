@@ -15,7 +15,7 @@ Use this as a diagnostic list, not a rigid ban list. Some patterns can be valid 
 
 ---
 
-## 1A. Self-narrating UI
+## 1A. Self-narrating UI / interface self-narration
 
 **Symptoms:** The interface explains its own design intent or implementation semantics instead of helping the user act. Examples include prominent subtitles about why a panel exists, labels that explain component contracts, or status text that describes the system's internal model rather than the user's current result.
 

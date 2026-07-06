@@ -15,6 +15,7 @@ Before significant frontend work, answer:
 - What step brought the user here, and what should happen after success?
 - What can go wrong, and how should the user recover?
 - What information is background context for the agent but should not be displayed?
+- What does the agent need to know but must not surface in primary UI?
 - Which terms are user-facing and which are internal implementation terms?
 - Which states require explanation and next actions?
 - Which operations are risky?
@@ -97,8 +98,11 @@ Internal terms to keep secondary (translate or hide):
   - [term] → [human translation]
   - [term] → [human translation]
 
-Agent-only context that should not appear as primary UI copy:
+What the agent needs to know but must not surface in primary UI:
   - [implementation note / design intent] → [where it belongs: docs / tooltip / diagnostic / code comment]
+
+Agent-only context that should not appear as primary UI copy:
+  - [system description / component semantics / protocol explanation] → [where it belongs: docs / tooltip / diagnostic / code comment]
 
 States that need explanation and next-step copy:
   - [state]: [what it means] + [what user should do]

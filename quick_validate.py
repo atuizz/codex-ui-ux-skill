@@ -335,6 +335,10 @@ def validate_scripts(report: Report) -> None:
 
     package_script = ROOT / "scripts" / "package_skill.py"
     if package_script.exists():
+        package_source = read_text(package_script, report)
+        for marker in ["VERSION_PATTERN", "Version file not found", "Create VERSION or pass --version"]:
+            report.ok(marker in package_source, f"package_skill.py missing version-safety marker: {marker}")
+
         with tempfile.TemporaryDirectory(prefix="uiux-package-validate-") as tmp:
             cmd = [sys.executable, "-S", str(package_script), "--output-dir", tmp]
             result = subprocess.run(cmd, cwd=str(ROOT), text=True, capture_output=True)

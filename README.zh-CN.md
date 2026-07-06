@@ -201,7 +201,7 @@ dist/ui-ux-<version>.skill
 
 ## 项目状态
 
-当前版本：[`v0.1.2`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.2)
+当前版本：[`v0.1.3`](https://github.com/atuizz/codex-ui-ux-skill/releases/tag/v0.1.3)
 
 成熟度：
 
