@@ -1,0 +1,104 @@
+{
+  "skill_name": "ui-ux",
+  "evals": [
+    {
+      "id": 1,
+      "name": "new-project-stack-and-governance",
+      "prompt": "我要从零做一个给客服主管用的工单质检后台：能看待处理工单、质检评分、异常原因和复核记录。你先别写代码，帮我确定前端技术栈、UI foundation、首屏页面形态和需要沉淀的前端规范。",
+      "expected_output": "The response should treat this as a new frontend product, establish project cognition, recommend stack/UI foundation with tradeoffs, choose reference systems by product temperament, define first journey and recovery states, and propose governance docs instead of jumping directly into code.",
+      "files": [],
+      "expectations": [
+        "Includes the Frontend Thinking Gate or equivalent project cognition fields before recommendations.",
+        "Identifies users, core business objects, primary task, first decision, success criterion, and recovery path.",
+        "Recommends a stack and UI foundation with tradeoffs rather than a single dogmatic choice.",
+        "Selects 2-4 reference systems by product temperament and states what to borrow and avoid.",
+        "Mentions loading, empty, error, permission, long-text/dense-data, mobile, and verification states.",
+        "Recommends creating or updating DESIGN.md and FRONTEND_CONTRACT.md when governance will repeat."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "half-built-admin-refactor",
+      "prompt": "这个 React 管理后台已经做了一半，页面全是 shadcn 默认卡片：用户、订单、发票、服务器状态都堆在首页。我想让它看起来专业一点，但别大重写。请先评估应该保留什么、替换什么、重构深度和最小安全下一步。",
+      "expected_output": "The response should classify the project as half-built, avoid automatic rewrite, identify business-object soup and card-wall risks, provide keep/replace/refactor-depth guidance, and propose the smallest safe improvement path with verification.",
+      "files": [],
+      "expectations": [
+        "Uses the half-built assessment format with Keep, Replace, Refactor depth, risks, and smallest useful next step.",
+        "Calls out business-object soup and card-wall risks instead of only suggesting visual styling.",
+        "Separates page IA issues from component-layer polish and does not recommend a full rewrite by default.",
+        "Preserves existing stack/components unless they block the product task.",
+        "Includes desktop/mobile/state verification rather than only lint/build checks."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "rescue-gpt-looking-ui",
+      "prompt": "我有个工具页被 AI 写得很像 landing page：大标题、渐变背景、一堆玻璃卡片，但真正要做的是上传 CSV、查看校验错误、修复后提交。帮我诊断这属于哪些 GPT/Codex 前端反模式，并给出修复深度和第一步。",
+      "expected_output": "The response should enter rescue mode, use anti-pattern and UX-evaluation concepts, diagnose the mismatch between landing-page treatment and a task workbench, classify fix depth, and prioritize journey/recovery before aesthetics.",
+      "files": [],
+      "expectations": [
+        "Explicitly identifies rescue mode or AI/GPT-looking UI degradation.",
+        "Lists relevant anti-patterns such as tool page as landing page, fake-premium styling, no journey, and everything visible/card wall if applicable.",
+        "Maps entry, first decision, action, feedback, recovery, and completion for the CSV workflow.",
+        "Classifies fix depth as cosmetic, page-level, component-layer, or restart and justifies it.",
+        "Recommends fixing task hierarchy and recovery states before visual decoration."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "install-frontend-governance-docs",
+      "prompt": "请给当前仓库安装前端治理规范。我要 docs/frontend/DESIGN.md、FRONTEND_CONTRACT.md、PAGE_BRIEF.md、FRONTEND_REVIEW.md，并且只在 AGENTS.md 里加一个短指针，不要把长 checklist 塞进去。",
+      "expected_output": "The response should use the bundled init_frontend_quality.py script or equivalent template copying, create/update the four frontend governance docs, add only a short AGENTS.md pointer, and avoid copying the skill globally unless explicitly requested.",
+      "files": [],
+      "expectations": [
+        "Uses scripts/init_frontend_quality.py or copies the bundled templates rather than inventing unrelated docs.",
+        "Creates or updates DESIGN.md, FRONTEND_CONTRACT.md, PAGE_BRIEF.md, and FRONTEND_REVIEW.md under docs/frontend.",
+        "Adds only a short AGENTS.md pointer and does not duplicate long frontend rules in AGENTS.md.",
+        "Does not install or copy the skill into the global Codex skills directory unless the user explicitly asks.",
+        "Reports which files were created, skipped, or updated."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "tiny-ui-sensitive-tweak",
+      "prompt": "只帮我把订单详情页里失败状态的文案从 failed 改成用户能懂的中文，并补一个下一步提示。不要重构页面，也不要改组件结构。",
+      "expected_output": "The response should use the light Tiny change gate, identify the affected surface/state and risk, make only the requested copy change, translate the technical state into human language with a next step, and avoid broad UI refactoring.",
+      "files": [],
+      "expectations": [
+        "Uses the Tiny change gate instead of the full Frontend Thinking Gate.",
+        "Identifies page/surface, impact, affected task/state, and risk to avoid.",
+        "Translates the technical failed state into human-facing Chinese copy with reason/impact/next step.",
+        "Does not propose or perform broad layout, component, or architecture refactors.",
+        "Mentions minimal verification for the affected UI state."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "backend-only-skip-near-miss",
+      "prompt": "仓库里有前端代码，但这次只改后端 API：给 /api/orders 增加一个 internal_trace_id 字段，前端不展示，测试也只覆盖接口返回。请实现。",
+      "expected_output": "This should be treated as a skip / should not trigger case for the ui-ux skill. A correct run should not emit the full UI/UX thinking gate, should not create frontend governance docs, and should proceed as a backend/API task unless a user-visible frontend change appears.",
+      "files": [],
+      "expectations": [
+        "Does not apply the Full Frontend Thinking Gate.",
+        "States briefly that the ui-ux skill is not needed because there is no user-visible frontend impact, or simply proceeds without UI/UX ceremony.",
+        "Does not create DESIGN.md, FRONTEND_CONTRACT.md, PAGE_BRIEF.md, or FRONTEND_REVIEW.md.",
+        "Does not recommend UI libraries, visual QA, or component refactors.",
+        "Keeps focus on backend/API implementation and tests."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "finished-product-polish",
+      "prompt": "这个 SaaS 计费页面已经上线了，但用户经常不敢点取消订阅，因为不知道会影响哪些席位和账单。帮我做一次 UX polish 评审，重点是文案、风险提示、确认/撤销、移动端和错误恢复。",
+      "expected_output": "The response should classify the product as finished and commerce-trust oriented, avoid architecture churn, focus on decision clarity and dangerous-operation safety, propose better copy/recovery states, and include mobile/accessibility verification.",
+      "files": [],
+      "expectations": [
+        "Classifies this as a finished product polish task rather than a redesign from scratch.",
+        "Recognizes commerce/billing trust temperament and dangerous-operation safety.",
+        "Focuses on decision clarity, consequence copy, confirmation or undo, and recovery paths.",
+        "Includes mobile primary action/reordering and accessibility/focus considerations.",
+        "Recommends codifying repeated billing/cancellation rules into FRONTEND_CONTRACT.md if applicable."
+      ]
+    }
+  ]
+}

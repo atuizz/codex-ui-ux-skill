@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a problem with the skill behavior, templates, or validation.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include the prompt, command, or file path involved.
+    validations:
+      required: false
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation output
+      description: Paste relevant `python -S quick_validate.py` output if applicable.
+    validations:
+      required: false

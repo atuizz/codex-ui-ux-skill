@@ -1,0 +1,82 @@
+[
+  {
+    "query": "这个 Next.js 后台首页已经能跑了，但页面像通用 SaaS 模板；请评审用户任务、信息层级、状态提示和移动端布局，然后给出重构方案。",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我从零设计一个给运营同学用的内容审核工作台，先推荐 UI foundation、表格/详情抽屉模式、错误恢复和前端规范文档。",
+    "should_trigger": true
+  },
+  {
+    "query": "我发你一张管理页面截图，感觉很 Codex 味：渐变、卡片墙、没主操作。请指出 UX 反模式和第一步修复。",
+    "should_trigger": true
+  },
+  {
+    "query": "给当前仓库加 docs/frontend/DESIGN.md 和 FRONTEND_CONTRACT.md，并在 AGENTS.md 只放短指针，不要塞长规则。",
+    "should_trigger": true
+  },
+  {
+    "query": "只改一个小 UI：把订单失败状态 failed 改成中文人话，并加下一步提示，别重构页面。",
+    "should_trigger": true
+  },
+  {
+    "query": "这个 shadcn 表格里塞了输入框、开关、长 ID 和危险操作，帮我重新拆浏览、查看、编辑和提交流程。",
+    "should_trigger": true
+  },
+  {
+    "query": "我们准备做一个 AI workflow builder，帮我判断产品气质、参考设计系统、首个页面的信息架构和验证计划。",
+    "should_trigger": true
+  },
+  {
+    "query": "SaaS 计费取消页用户不敢点确认，帮我优化风险提示、确认/撤销机制、错误恢复、移动端主操作和文案。",
+    "should_trigger": true
+  },
+  {
+    "query": "这个上传 CSV 的工具页被做成 landing page 了，真正任务是上传、看校验错误、修复、提交；请救一下 UX。",
+    "should_trigger": true
+  },
+  {
+    "query": "为新的设置向导写 PAGE_BRIEF：用户从邀请链接进入，第一步要选择团队，后面配置权限和账单。",
+    "should_trigger": true
+  },
+  {
+    "query": "只改后端 /api/orders，增加 internal_trace_id 字段用于日志串联，前端不展示，接口测试通过即可。",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我把 utils/formatDate.ts 的单元测试补全，主要覆盖时区和空值，不涉及任何页面展示。",
+    "should_trigger": false
+  },
+  {
+    "query": "升级 vite、typescript 和 eslint 版本，修一下 lockfile 冲突；不要改业务代码和页面样式。",
+    "should_trigger": false
+  },
+  {
+    "query": "把数据库 migrations 里的 customer_id 改成 account_id，并更新后端 ORM model，UI 暂时不动。",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我写一个 Python 脚本，把 CSV 的重复 email 合并并输出新的 xlsx 文件，和前端项目无关。",
+    "should_trigger": false
+  },
+  {
+    "query": "生成一张品牌海报图，用深蓝背景和金色标题，输出 PNG，不需要改网站或前端代码。",
+    "should_trigger": false
+  },
+  {
+    "query": "把 README 里的部署步骤翻译成中文，并保持 markdown 表格格式，不需要创建任何 UI 页面。",
+    "should_trigger": false
+  },
+  {
+    "query": "GitHub Actions 的 lint job 失败了，帮我看日志并修 CI 配置，失败点不是页面截图或前端交互。",
+    "should_trigger": false
+  },
+  {
+    "query": "给后端服务加一个 Redis 缓存层，缓存用户权限查询结果，不改任何可见页面和文案。",
+    "should_trigger": false
+  },
+  {
+    "query": "我有一个 PDF 合同，帮我合并封面和附件并加页码，和网页 UI 没有关系。",
+    "should_trigger": false
+  }
+]

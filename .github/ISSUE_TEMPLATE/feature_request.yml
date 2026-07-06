@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest an improvement to the skill, templates, evals, or validator.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What user task or project situation should this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: evals
+    attributes:
+      label: Evaluation idea
+      description: What eval or trigger query would prove this works?
+    validations:
+      required: false
